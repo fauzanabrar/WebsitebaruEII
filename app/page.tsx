@@ -1,15 +1,12 @@
 import { Metadata } from "next";
-import { PlusCircledIcon } from "@radix-ui/react-icons";
-
 import { Button } from "@/components/ui/button";
-import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-import { AlbumArtwork } from "@/components/album-artwork";
 import { PodcastEmptyPlaceholder } from "@/components/podcast-empty-placeholder";
 import { listenNowAlbums, madeForYouAlbums } from "@/data/albums";
 import DashboardLayout from "@/layouts/DashboardLayouts";
+import GridLists from "@/components/grid-lists";
 
 export const metadata: Metadata = {
   title: "Music App",
@@ -64,23 +61,7 @@ export default function HomePage() {
                   </p>
                 </div>
                 <Separator className="my-4" />
-                <div className="relative">
-                  <ScrollArea>
-                    <div className="flex flex-wrap gap-4 pb-4">
-                      {madeForYouAlbums.map((album) => (
-                        <AlbumArtwork
-                          key={album.name}
-                          album={album}
-                          className="w-[150px]"
-                          aspectRatio="square"
-                          width={150}
-                          height={150}
-                        />
-                      ))}
-                    </div>
-                    <ScrollBar orientation="horizontal" />
-                  </ScrollArea>
-                </div>
+                <GridLists listItems={madeForYouAlbums} />
               </TabsContent>
               <TabsContent
                 value="list"
