@@ -3,10 +3,10 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-import { PodcastEmptyPlaceholder } from "@/components/podcast-empty-placeholder";
-import { listenNowAlbums, madeForYouAlbums } from "@/data/albums";
+import { madeForYouAlbums } from "@/data/albums";
 import DashboardLayout from "@/layouts/DashboardLayouts";
 import GridLists from "@/components/grid-lists";
+import Lists from "@/components/lists";
 
 export const metadata: Metadata = {
   title: "Music App",
@@ -54,31 +54,39 @@ export default function HomePage() {
               >
                 <div className="mt-6 space-y-1">
                   <h2 className="text-2xl font-semibold tracking-tight">
-                    Made for You
+                    Lists
                   </h2>
                   <p className="text-sm text-muted-foreground">
-                    Your personal playlists. Updated daily.
+                    list that can be scrolled horizontally
                   </p>
                 </div>
                 <Separator className="my-4" />
-                <GridLists listItems={madeForYouAlbums} />
+                <Lists listItems={madeForYouAlbums} canScroll={true} />
+                <div className="mt-6 space-y-1">
+                  <h2 className="text-2xl font-semibold tracking-tight">
+                    Grid List
+                  </h2>
+                  <p className="text-sm text-muted-foreground">
+                    Grid list horizontally.
+                  </p>
+                </div>
+                <Separator className="my-4" />
+                <GridLists listItems={madeForYouAlbums} canScroll={true} />
               </TabsContent>
               <TabsContent
                 value="list"
                 className="h-full flex-col border-none p-0 data-[state=active]:flex"
               >
-                <div className="flex items-center justify-between">
-                  <div className="space-y-1">
-                    <h2 className="text-2xl font-semibold tracking-tight">
-                      New Episodes
-                    </h2>
-                    <p className="text-sm text-muted-foreground">
-                      Your favorite podcasts. Updated daily.
-                    </p>
-                  </div>
+                <div className="mt-6 space-y-1">
+                  <h2 className="text-2xl font-semibold tracking-tight">
+                    Lists
+                  </h2>
+                  <p className="text-sm text-muted-foreground">
+                    list that can be scrolled horizontally
+                  </p>
                 </div>
                 <Separator className="my-4" />
-                <PodcastEmptyPlaceholder />
+                <Lists listItems={madeForYouAlbums} canScroll={true} />
               </TabsContent>
             </Tabs>
           </div>

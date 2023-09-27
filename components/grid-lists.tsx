@@ -6,7 +6,7 @@ export default function GridLists({listItems, canScroll = false}: {listItems: an
     <div className="relative">
     <ScrollArea className={`h-${canScroll ? '80' : 'auto'}`}>
       <div className="flex flex-wrap gap-4 pb-4">
-        {listItems.map((item) => (
+        {listItems.map((item: any) => (
           <GridItem
             key={item.name}
             item={item}
