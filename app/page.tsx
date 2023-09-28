@@ -5,7 +5,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 import { madeForYouAlbums } from "@/data/albums";
 import DashboardLayout from "@/layouts/DashboardLayouts";
-import GridLists from "@/components/grid-lists";
 import Lists from "@/components/lists";
 
 export const metadata: Metadata = {
@@ -36,9 +35,9 @@ export default function HomePage() {
                       viewBox="0 0 24 24"
                       fill="white"
                       stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                       className="lucide lucide-plus -ml-1 mr-1"
                     >
                       <path d="M5 12h14" />
@@ -71,7 +70,7 @@ export default function HomePage() {
                   </p>
                 </div>
                 <Separator className="my-4" />
-                <GridLists listItems={madeForYouAlbums} canScroll={true} />
+                <Lists listItems={madeForYouAlbums} canScroll={true} type="grid" />
               </TabsContent>
               <TabsContent
                 value="list"
