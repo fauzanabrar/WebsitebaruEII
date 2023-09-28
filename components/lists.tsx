@@ -14,7 +14,7 @@ export default function Lists({
 }) {
   return (
     <div className="relative">
-      <ScrollArea className={`h-${canScroll ? "80" : "auto"}`}>
+      <ScrollArea className={cn(canScroll ? "h-80" : "h-auto")}>
         <div className="flex flex-wrap gap-2">
           {listItems?.map((item: any) => {
             if (type === "list") {
