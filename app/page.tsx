@@ -6,6 +6,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { madeForYouAlbums } from "@/data/albums";
 import DashboardLayout from "@/layouts/DashboardLayouts";
 import Lists from "@/components/lists";
+import { InputFile } from "@/components/input-file";
 
 export const metadata: Metadata = {
   title: "Music App",
@@ -59,6 +60,7 @@ export default function HomePage() {
                     list that can be scrolled horizontally
                   </p>
                 </div>
+            <InputFile /> 
                 <Separator className="my-4" />
                 <Lists listItems={madeForYouAlbums} canScroll={true} />
                 <div className="mt-6 space-y-1">
