@@ -44,7 +44,7 @@ export default function HomePage() {
                       <path d="M5 12h14" />
                       <path d="M12 5v14" />
                     </svg>
-                      Upload File
+                    Upload File
                   </Button>
                 </div>
               </div>
@@ -60,7 +60,7 @@ export default function HomePage() {
                     list that can be scrolled horizontally
                   </p>
                 </div>
-            <InputFile /> 
+                <InputFile />
                 <Separator className="my-4" />
                 <Lists listItems={madeForYouAlbums} canScroll={true} />
                 <div className="mt-6 space-y-1">
@@ -72,7 +72,11 @@ export default function HomePage() {
                   </p>
                 </div>
                 <Separator className="my-4" />
-                <Lists listItems={madeForYouAlbums} canScroll={true} type="grid" />
+                <Lists
+                  listItems={madeForYouAlbums}
+                  canScroll={true}
+                  type="grid"
+                />
               </TabsContent>
               <TabsContent
                 value="list"
