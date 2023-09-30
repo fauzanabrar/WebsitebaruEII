@@ -9,8 +9,8 @@ import Lists from "@/components/lists";
 import { InputFile } from "@/components/input-file";
 
 export const metadata: Metadata = {
-  title: "Music App",
-  description: "Example music app using the components.",
+  title: "Dashboard",
+  description: "Dashboard",
 };
 
 export default function HomePage() {
